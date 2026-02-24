@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #fbd3e9, #bb377d);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #bb377d;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            color: #bb377d;
+            font-weight: bold;
+        }
+
+        /* Corazón palpitante */
+        .heart {
+            color: red;
+            font-size: 2em;
+            display: inline-block;
+            animation: heartbeat 1s infinite;
+            margin-top: 15px;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Estrellas cayendo */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            top: -10px;
+            width: 5px;
+            height: 5px;
+            background: yellow;
+            opacity: 0.8;
+            border-radius: 50%;
+            animation: fall 2s infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Estrellas aleatorias */
+        .star:nth-child(1) {
+            left: 20%;
+            animation-delay: 0s;
+        }
+        .star:nth-child(2) {
+            left: 40%;
+            animation-delay: 0.5s;
+        }
+        .star:nth-child(3) {
+            left: 60%;
+            animation-delay: 1s;
+        }
+        .star:nth-child(4) {
+            left: 80%;
+            animation-delay: 1.5s;
+        }
+        .star:nth-child(5) {
+            left: 25%;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+    <div class="container">
+        <h1>Feliz Cumpleaños <span class="heart">❤</span></h1>
+        <p>Te deseo lo mejor en este día tan especial. Que cada paso que des te acerque a tus sueños y logres todas tus metas.</p>
+        <p>A pesar de todo lo que pasó, quiero que sepas que te sigo apreciando y recordando los momentos bonitos. Gracias por todo y por la linda relación que compartimos.</p>
+        <p>🎉✨</p>
+    </div>
+</body>
+</html>
